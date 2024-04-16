@@ -1,0 +1,17 @@
+LA APLICACIÓN:
+---------------
+
+	- Registro del alumno. --> Diseño completado.
+
+	- Inicio de sesión para hacer un reconocimiento. --> Diseño completado.
+	- Formulario para hacer el reconocimiento del compañero --> Diseño completado.
+	
+	- Inicio de sesión para ver los reconocimientos. --> Diseño completado.
+	- Página de reconocimientos del alumno. --> Diseño completado.
+	- Página para ver el reconocimiento. 
+
+-----------------------------------------------------------------------------------------------
+TRABAJO ACTUAL:
+_________________
+
+	- Hay que completar los procesos del inicio de sesión para hacer reconocimiento y del formulario de nuevo reconocimiento (HOY)
