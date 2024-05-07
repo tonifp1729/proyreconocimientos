@@ -15,7 +15,7 @@ LA APLICACIÓN:
 TRABAJO ACTUAL: PRIORIDAD ABSOLUTA
 _________________
 
-	- Hay que completar los procesos del inicio de sesión para hacer reconocimiento y del formulario de nuevo reconocimiento (HOY)
+	- Hay que completar los procesos del inicio de sesión para ver reconocimiento y del formulario de nuevo reconocimiento (HOY)
 	- Incluir cookie de "último alumno al que se ha enviado".
 ______________________________________________________________________________________________________________________________________
 

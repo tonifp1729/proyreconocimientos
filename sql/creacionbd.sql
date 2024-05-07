@@ -1,4 +1,4 @@
-USE user2daw_BD1-05;
+-- USE user2daw_BD1-05;
 
 --Tabla alumno
 CREATE TABLE alumno (
@@ -10,12 +10,11 @@ CREATE TABLE alumno (
     CONSTRAINT pk_usuario PRIMARY KEY (idAlumno),
     CONSTRAINT correo_unico UNIQUE (correo),
     CONSTRAINT WEB_unica UNIQUE (webReconocimiento)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+); ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- Tabla reconocimiento
 CREATE TABLE reconocimiento (
     idReconocimiento smallint unsigned AUTO_INCREMENT,
-    categoria char(11) NOT NULL,
     momento varchar(100) NOT NULL,
     descripcion varchar(255) NOT NULL,
     idAlumEnvia tinyint unsigned NOT NULL,
@@ -23,4 +22,4 @@ CREATE TABLE reconocimiento (
 	constraint pk_recon PRIMARY KEY (idReconocimiento),
     constraint fk_alumno_env FOREIGN KEY (idAlumEnvia) REFERENCES alumno(idAlumno),
     constraint fk_alumno_rec FOREIGN KEY (idAlumRecibe) REFERENCES alumno(idAlumno)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+); ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
