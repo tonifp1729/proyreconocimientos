@@ -2,7 +2,7 @@
 
 --Tabla alumno
 CREATE TABLE alumno (
-    idAlumno tinyint unsigned NOT NULL, 
+    idAlumno tinyint unsigned NOT NULL AUTO_INCREMENT, 
     nombre varchar(80) NOT NULL,
     correo varchar(255) NOT NULL,
     contrasenia varchar(100) NOT NULL,
