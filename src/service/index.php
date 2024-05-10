@@ -1,21 +1,24 @@
 <!-- Este es el controlador principal de la aplicación -->
 <?php
-    require_once '../src/php/model/isesion.php';
+    // require_once '../src/php/model/isesion.php';
 
     class Controlador {
         
-        //Redirecciona a la página de inicio de sesión de reconocimientos
+        //Redirecciona a la página de inicio de sesión para ver los reconocimientos recibidos
         public function verReconocimientos() {
-            header("Location: ruta_de_la_pagina_para_ver_reconocimientos.php");
+            header("Location: ../php/view/isesionver.php");
             exit; //IMPORTANTE Hay que asegurarse de salir del script de PHP después de redireccionar
         }
 
-        //Redirecciona a la página de inicio de sesión para ver los reconocimientos recibidos
+        //Redirecciona a la página de inicio de sesión de reconocimientos
         public function hacerReconocimientos() {
-            header("Location: ruta_de_la_pagina_para_ver_reconocimientos.php");
+            header("Location: ../php/view/isesionhacer.php");
             exit;
         }
     }
+
+    //Instanciamos el controlador
+    $controlador = new Controlador();
 
     // Verifica la acción y llama al método correspondiente
     if (isset($_GET['a'])) {
@@ -33,6 +36,4 @@
                 break;
         }
     }
-    
-    $controlador = new Controlador();
 ?>
