@@ -15,6 +15,7 @@
             header("Location: ../php/view/isesionhacer.php");
             exit;
         }
+        
     }
 
     //Instanciamos el controlador
