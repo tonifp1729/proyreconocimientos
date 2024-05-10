@@ -1,6 +1,6 @@
 <?php
-    require_once '../src/service/config/conexiondb.php';
-    require_once '../src/service/queries/consultas.php';
+    require_once 'C:\xampp\htdocs\proyreconocimientos\src\service\queries\consultas.php';
+    require_once 'C:\xampp\htdocs\proyreconocimientos\src\service\config\conexiondb.php';
 
     class InicioSesion {
 

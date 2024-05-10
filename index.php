@@ -1,6 +1,6 @@
 <!-- Este es el controlador principal de la aplicación -->
 <?php
-    // require_once '../src/php/model/isesion.php';
+    require_once '../php/model/isesion.php';
 
     class Controlador {
         
@@ -20,7 +20,7 @@
     //Instanciamos el controlador
     $controlador = new Controlador();
 
-    // Verifica la acción y llama al método correspondiente
+    //Comprueba la acción que se desea realizar y la ejecuta
     if (isset($_GET['a'])) {
         $accion = $_GET['a'];
         switch ($accion) {
@@ -31,7 +31,7 @@
                 $controlador->hacerReconocimientos();
                 break;
             default:
-                // Acción desconocida, mostrar un mensaje de error o redireccionar a una página de error
+                //Mensaje en caso de error al lanzar una acción (que llegue un valor nulo o no coincidente)
                 echo "Acción desconocida";
                 break;
         }

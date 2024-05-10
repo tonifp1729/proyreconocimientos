@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <h2>Inicio de sesión para hacer reconocimientos</h2>
-            <form action="../src/php/model/isesion.php" method="post">
+            <form action="../../service/index.php" method="post">
                 <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo" required>
 
