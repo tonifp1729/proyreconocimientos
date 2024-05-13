@@ -15,7 +15,7 @@
                     //AQUÍ SE ENCUENTRA MI DUDA <--------------------------------------------------------------------------------
                     //No sabría hacerlo de otro modo teniendo que pasar por el controlador, quiero saber si esta forma es la apropiada
                     require_once 'src/php/model/isesion.php';
-                    $isesion = new InicioSesion($correo, $contrasena);
+                    $isesion = new InicioSesion($conexion ,$correo, $contrasena);
 
                     if($isesion->identificacion($correo, $contrasena)) {
                         //Si las credenciales introducidas son correctas, nos dirigimos al índice

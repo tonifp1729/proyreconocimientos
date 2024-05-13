@@ -3,13 +3,14 @@
     require_once 'conexiondb.php';
 
     class InicioSesion {
+        private $conexion;
 
-        public function __construct($conexion) {
+        public function __construct($conexion,$correo, $contrasena) {
             $this->conexion = $conexion;
         }
 
-        public function identificacion($correo, $contrasena) {            
-            
+        public function identificacion($correo, $contrasena) {
+
             //Traemos la consulta SQL necesaria para el proceso de inicio de sesión
             $SQL = Consultas::consultaCredencialesISesion();
             
