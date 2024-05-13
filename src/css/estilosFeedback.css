@@ -70,3 +70,9 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #386f91;
 }
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+}

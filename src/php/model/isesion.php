@@ -1,17 +1,20 @@
 <?php
-    require_once 'C:\xampp\htdocs\proyreconocimientos\src\service\queries\consultas.php';
-    require_once 'C:\xampp\htdocs\proyreconocimientos\src\service\config\conexiondb.php';
+    require_once 'consultas.php';
+    require_once 'conexiondb.php';
 
     class InicioSesion {
 
         public function __construct($conexion) {
             $this->conexion = $conexion;
-            $this->credencialesISesion = Consultas::CREDENCIALES_I_SESION;
         }
 
         public function identificacion($correo, $contrasena) {            
+            
+            //Traemos la consulta SQL necesaria para el proceso de inicio de sesión
+            $SQL = Consultas::consultaCredencialesISesion();
+            
             //Preparar la declaración de la consulta
-            $consulta = $this->conexion->prepare($this->credencialesISesion);
+            $consulta = $this->conexion->prepare($SQL);
             
             //Vincular parámetros
             $consulta->bind_param("ss", $correo, $contrasena);

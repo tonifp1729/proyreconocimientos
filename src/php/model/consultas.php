@@ -4,8 +4,10 @@ emplearemos como consultas preparadas en toda la aplicación -->
 <?php
     class Consultas {
         //Consulta para verificar las credenciales de usuario para el inicio de sesión
-        public const CREDENCIALES_I_SESION = "SELECT idAlumno, nombre FROM alumno WHERE correo = ? AND contrasena = ?";
+        public static function consultaCredencialesISesion() {
+            return "SELECT idAlumno, nombre FROM alumno WHERE correo = ? AND contrasena = ?";
+        }
         
-        //Añade más consultas por aquí. Especifica para qué se utilizarán
+        //Añade más métodos para obtener consultas por aquí. Especifica para qué se utilizarán
     }
 ?>
