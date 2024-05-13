@@ -30,7 +30,9 @@
             if ($resultado->num_rows == 1) {
                 //Devuelve la información del usuario debido a que se han dado unas credenciales correctas
                 $usuario = $resultado->fetch_assoc();
-                return $usuario;
+                session_start();
+                $_SESSION['usuario'] = $usuario;
+                return true;
             } else {
                 //Devuelve falso en caso de que las credenciales de usuario sean incorrectas
                 return false;
