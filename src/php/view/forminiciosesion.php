@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <h2>Web de reconocimientos - Escuela Virgen de Guadalupe</h2>
-            <form action="../controller/cisesion.php" method="post">
+            <form action="validar.php" method="post">
                 <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo" required>
 
