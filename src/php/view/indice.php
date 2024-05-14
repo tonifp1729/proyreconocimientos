@@ -1,5 +1,5 @@
 <?php
-    //Inicia la sesión cuando se llega a esta página a través del formulario de inicio
+    //Inicia la sesión desde el modelo y se le da continuidad al comienzo de cada página de este modo.
     session_start();
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
             <p>Esta aplicación te permite dar y recibir feedback de tus compañeros de clase.</p>
             <p>Podrás ver los reconocimientos que has recibido y hacer reconocimientos a tus compañeros.</p>
             <p>¡Comienza ahora mismo!</p>
-            <a href="src/service/index.php?a=ver">Ver reconocimientos</a> | <a href="src/service/index.php?a=hacer">Hacer reconocimientos</a>
+            <a href="../../../index.php?a=ver">Ver reconocimientos</a> | <a href="../../../index.php?a=hacer">Hacer reconocimientos</a>
         </div>
     </body>
 </html>

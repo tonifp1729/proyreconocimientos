@@ -1,29 +1,9 @@
-LA APLICACIÓN:
----------------
-
-	- Registro del alumno. --> Diseño completado.
-
-	- Inicio de sesión para hacer un reconocimiento. --> Diseño completado.
-	- Formulario para hacer el reconocimiento del compañero --> Diseño completado.
-	
-	- Inicio de sesión para ver los reconocimientos. --> Diseño completado.
-	- Página de reconocimientos del alumno. --> Diseño completado.
-	- Página para ver el reconocimiento. 
-
-
------------------------------------------------------------------------------------------------
 TRABAJO ACTUAL: PRIORIDAD ABSOLUTA
-_________________
+___________________________________
 
-	- Hay que completar los procesos del inicio de sesión para ver reconocimiento y del formulario de nuevo reconocimiento (HOY)
-	- Incluir cookie de "último alumno al que se ha enviado".
-______________________________________________________________________________________________________________________________________
+	- Regitro de nuevo usuario.
+	- Proceso: Ver los reconocimientos que ha recibido un alumno.
+	- Proceso: Hacer reconocimiento a un compañero.
 
-CLASES: Identificacion
-
-Métodos de la clase Identificacion: registro, i_sesion
-
-TODO ESTO VA A SER EN UN COMIENZO EN ESTE FORMATO:
-
-		->procesos
-		->
+-------------------------
+Estamos completando el CONTROLADOR DE INICIO DE SESION

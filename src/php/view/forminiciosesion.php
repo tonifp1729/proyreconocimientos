@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <h2>Web de reconocimientos - Escuela Virgen de Guadalupe</h2>
-            <form action="../../../index.php" method="post">
+            <form action="../controller/cisesion.php" method="post">
                 <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo" required>
 
@@ -31,12 +31,11 @@
                     }
                 }
             ?>
-
+            
             <form action="../../../index.php" method="get">
                 <input type="hidden" name="a" value="irreg">
                 <p>¿No tienes una cuenta? <input type="submit" value="Regístrate aquí"></p>
             </form>
-
         </div>
     </body>
 </html>

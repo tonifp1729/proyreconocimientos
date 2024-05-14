@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../../css/estilosFeedback.css">
     </head>
     <body>
-        <div class="contenedor">
+        <div class="container">
             <h1>Reconocimiento reconocimientoSeleccionado</h1>
             <label for="momento">Momento:</label>
             <input type="text" id="momento" name="momento" hidden>

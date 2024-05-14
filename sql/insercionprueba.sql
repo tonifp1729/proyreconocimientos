@@ -20,4 +20,9 @@ INSERT INTO reconocimiento (momento, descripcion, idAlumEnvia, idAlumRecibe) VAL
 ('2024-04-26', 'Siempre busca soluciones antes de que surjan problemas', 3, 2),
 ('2024-04-25', 'Se preocupa por el bienestar de sus compañeros', 4, 2),
 ('2024-04-24', 'Rápida resolución de un problema técnico complicado', 5, 2),
-('2024-04-23', 'Adaptabilidad ante cambios inesperados en el proyecto', 6, 2);
+('2024-04-23', 'Adaptabilidad ante cambios inesperados en el proyecto', 6, 2),
+('2024-04-27', 'Clara y efectiva comunicación durante la reunión', 2, 7),
+('2024-04-26', 'Siempre busca soluciones antes de que surjan problemas', 3, 7),
+('2024-04-25', 'Se preocupa por el bienestar de sus compañeros', 4, 7),
+('2024-04-24', 'Rápida resolución de un problema técnico complicado', 5, 7),
+('2024-04-23', 'Adaptabilidad ante cambios inesperados en el proyecto', 6, 7);

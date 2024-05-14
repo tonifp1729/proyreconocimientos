@@ -1,44 +1,39 @@
+<!-- Este es el modelo de inicio de sesión -->
 <?php
-    require_once 'consultas.php';
+    
     require_once 'conexiondb.php';
-
+    
     class InicioSesion {
         private $conexion;
-
-        public function __construct($conexion,$correo, $contrasena) {
+    
+        public function __construct($conexion, $correo, $contrasena) {
             $this->conexion = $conexion;
         }
-
+    
         public function identificacion($correo, $contrasena) {
-
-            //Traemos la consulta SQL necesaria para el proceso de inicio de sesión
-            $SQL = Consultas::consultaCredencialesISesion();
-            
-            //Preparar la declaración de la consulta
-            $consulta = $this->conexion->prepare($SQL);
-            
-            //Vincular parámetros
+    
+            //Consulta SQL para obtener al alumno que trata de realizar el inicio de sesión
+            $sql = "SELECT idAlumno FROM alumno WHERE correo = ? AND contrasenia = ?";
+            $consulta = $this->conexion->prepare($sql);
+    
+            //Vinculamos los parámetros con la consulta previamente preparada
             $consulta->bind_param("ss", $correo, $contrasena);
-            
+    
             //Ejecutamos la consulta
             $consulta->execute();
-            
-            //Obtenemos el resultado de la consulta y lo introducimos en una variable para disponer fácilmente de este para su uso
+    
+            //Obtenemos el resultado de la misma y lo guardamos en una variable para su utilización
             $resultado = $consulta->get_result();
-
-            //Comprueba si se ha encontrado la fila que corresponde a la información introcucida por el usuario
+    
+            //Verificamos que se haya encontrado el alumno con las credenciales proporcionadas
             if ($resultado->num_rows == 1) {
-                //Devuelve la información del usuario debido a que se han dado unas credenciales correctas
-                $usuario = $resultado->fetch_assoc();
-                session_start();
-                $_SESSION['usuario'] = $usuario;
-                return true;
+                $alumno = $resultado->fetch_assoc();
+                return $alumno['idAlumno'];
             } else {
-                //Devuelve falso en caso de que las credenciales de usuario sean incorrectas
-                return false;
+                return false; //Devuelve falso en caso de que las credenciales de usuario sean incorrectas
             }
-
-            //Cerramos la conexión a la base de datos
+    
+            // Cerrar la consulta
             $consulta->close();
         }
     }
