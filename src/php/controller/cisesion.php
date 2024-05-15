@@ -14,15 +14,15 @@
             //Verificar que se han recibido las credenciales
             if (!empty($correo) && !empty($contrasena)) {
                 //Crear una instancia del modelo de inicio de sesión
-                $modeloInicioSesion = new InicioSesion($this->conexion);
+                $isesion = new InicioSesion($this->conexion);
 
                 //Verificar las credenciales utilizando el método del modelo
-                $idAlumno = $modeloInicioSesion->identificacion($correo, $contrasena);
-
-                if ($idAlumno) {
+                $alumno = $isesion->identificacion($correo, $contrasena);
+                
+                if ($alumno) {
                     //Iniciar sesión y redirigir al índice si las credenciales son correctas
                     session_start();
-                    $_SESSION['idAlumno'] = $idAlumno;
+                    $_SESSION['alumno'] = $alumno;
                     header("Location: ../../../index.php?a=indice");
                     exit;
                 } else {
