@@ -16,7 +16,6 @@
                 <label for="contrasena">Contraseña:</label>
                 <input type="password" id="contrasena" name="contrasena" required>
                 
-                <input type="hidden" name="a" value="inse">
                 <input type="submit" value="Iniciar sesión">
             </form>
             

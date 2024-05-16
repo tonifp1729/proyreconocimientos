@@ -1,12 +1,12 @@
 <?php
 
-    require_once 'conexiondb.php';
+    require_once '../../config/config.php';
 
     class InicioSesion {
         private $conexion;
 
-        public function __construct($conexion) {
-            $this->conexion = $conexion;
+        public function __construct() {
+            $this->conexion = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         }
 
         public function identificacion($correo, $contrasena) {

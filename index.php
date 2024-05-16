@@ -20,13 +20,18 @@
                 header("Location: src/php/view/registro.php");
                 exit;
                 break;
+            case 'iris':
+                //Redirecciona a inicio de sesión
+                header("Location: src/php/view/forminiciosesion.php");
+                exit;
+                break;
             case 'indice':
                 //Redirecciona a la página para hacer nuevos reconocimientos
                 header("Location: src/php/view/indice.php");
                 exit;
                 break;
             default:
-                //Mensaje en caso de error al lanzar una acción (que llegue un valor nulo o no coincidente)
+                //Mensaje en caso de error al lanzar una acción (que llegue un valor nulo o no coincidente) 
                 echo "Acción desconocida";
                 break;
         }
