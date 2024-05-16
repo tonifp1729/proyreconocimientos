@@ -9,7 +9,7 @@
         $contrasena = $_POST['contrasena'];
 
         //Instanciamos el controlador
-        $controladorInicioSesion = new ControladorInicioSesion($conexion);
+        $controladorInicioSesion = new ControladorInicioSesion();
 
         // Llamar al método identificacion del controlador
         $controladorInicioSesion->identificacion($correo, $contrasena);

@@ -3,18 +3,13 @@
     require_once '../model/isesion.php';
 
     class ControladorInicioSesion {
-        private $conexion;
-
-        public function __construct($conexion) {
-            $this->conexion = $conexion;
-        }
 
         public function identificacion($correo, $contrasena) {
 
             //Verificar que se han recibido las credenciales
             if (!empty($correo) && !empty($contrasena)) {
                 //Crear una instancia del modelo de inicio de sesión
-                $isesion = new InicioSesion($this->conexion);
+                $isesion = new InicioSesion();
 
                 //Verificar las credenciales utilizando el método del modelo
                 $alumno = $isesion->identificacion($correo, $contrasena);
