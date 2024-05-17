@@ -4,6 +4,8 @@
 
     class ControladorInicioSesion {
 
+        //CONSTRUCTOR CON OBJ MODELO
+
         public function identificacion($correo, $contrasena) {
 
             //Verificar que se han recibido las credenciales
@@ -12,12 +14,13 @@
                 $isesion = new InicioSesion();
 
                 //Verificar las credenciales utilizando el método del modelo
-                $alumno = $isesion->identificacion($correo, $contrasena);
+                $alumno = $isesion->identificacion($correo, $contrasena); //ESTE $alumno ES UN ARRAY
                 
                 if ($alumno) {
                     //Iniciar sesión y redirigir al índice si las credenciales son correctas
                     session_start();
-                    $_SESSION['alumno'] = $alumno;
+                    $_SESSION['id'] = $alumno['idAlumno'];
+                    $_SESSION['nombre'] = $alumno['nombre'];
                     header("Location: ../../../index.php?a=indice");
                     exit;
                 } else {
