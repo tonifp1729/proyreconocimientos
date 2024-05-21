@@ -1,6 +1,6 @@
 <?php
 
-    require_once '../../config/configdb.php';
+    require_once 'C:\xampp\htdocs\proyreconocimientos\src\config\config.php';
 
     class InicioSesion {
         private $conexion;

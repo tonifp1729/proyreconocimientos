@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Reconociendo</title>
-        <link rel="stylesheet" href="../../css/estilosFeedback.css">
+        <link rel="stylesheet" href="src/css/estilosFeedback.css">
     </head>
     <body>
         <div class="container">

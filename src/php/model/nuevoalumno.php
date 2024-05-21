@@ -23,18 +23,6 @@
             //Ejecutamos la consulta
             $consulta->execute();
             
-            //Obtener el resultado de la consulta
-            $resultado = $consulta->get_result();
-
-            //Comprueba si se encontró una fila correspondiente a las credenciales proporcionadas
-            if ($resultado->num_rows == 1) {
-                //Obtenemos el id del alumno si las credenciales ya estaban presentes en la bd
-                
-            } else {
-                //Devolvemos false si las credenciales son incorrectas
-                
-            }
-            
             //Cerramos la consulta
             $consulta->close();
 

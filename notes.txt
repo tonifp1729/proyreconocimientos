@@ -4,6 +4,6 @@ ___________________________________
 	- Regitro de nuevo usuario.
 	- Proceso: Ver los reconocimientos que ha recibido un alumno.
 	- Proceso: Hacer reconocimiento a un compañero.
+___________________________________
 
--------------------------
-Estamos completando el CONTROLADOR DE INICIO DE SESION
+	--> Pendiente de modificacion del configdb y el index.

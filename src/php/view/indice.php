@@ -8,7 +8,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bienvenido a la Aplicación de Feedback</title>
-        <link rel="stylesheet" href="../../css/estilosFeedback.css">
+        <link rel="stylesheet" href="src/css/estilosFeedback.css">
     </head>
     <body>
         <div class="container">

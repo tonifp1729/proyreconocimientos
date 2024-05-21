@@ -2,7 +2,7 @@
 
     require_once '../model/nuevoreconocimiento.php';
 
-    class ControladorInicioSesion {
+    class ControladorRegistro {
         private $conexion;
 
         public function __construct($conexion) {
