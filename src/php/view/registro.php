@@ -17,6 +17,7 @@
                 
                 <input type="submit" value="Crear">
             </form>
+            <p>¿Ya estás registrado? <a  href="index.php?controlador=cisesion&action=irsesion">Regístrate aquí</a>
         </div>
 
         <?php
@@ -30,12 +31,5 @@
                 }
             }
         ?>
-        
-        <div>
-            <form action="../../../index.php" method="get">
-                <input type="hidden" name="a" value="iris">
-                <input type="submit" value="¿Ya tienes usuario?">
-            </form>
-        </div>
     </body>
 </html>

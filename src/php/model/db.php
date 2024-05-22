@@ -13,7 +13,7 @@ require_once 'C:\xampp\htdocs\proyreconocimientos\src\config\config.php';
 
             $this->host = constant('DB_HOST');
             $this->user = constant('DB_USER');
-            $this->pass = constant('DB_PASS');
+            $this->pass = constant('DB_PASSWORD');
             $this->db = constant('DB_NAME');
 
             $this->conexion = new mysqli($this->host, $this->user, $this->pass, $this->db);

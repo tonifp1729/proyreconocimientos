@@ -25,8 +25,7 @@
                     session_start();
                     $_SESSION['id'] = $alumno['idAlumno'];
                     $_SESSION['nombre'] = $alumno['nombre'];
-                    header("Location: index.php?controlador=cisesion&action=indice");
-                    exit;
+                    $this->irindice(); //PASAMOS LA INFORMACION DE LA SIGUIENTE VISTA. Este es el modo de usar un método de la propia clase
                 } else {
                     //Redirige al formulario de inicio de sesión con un mensaje de error si las credenciales son incorrectas
                     header("Location: src/php/view/forminiciosesion.php?error=credenciales_invalidas");
@@ -37,6 +36,10 @@
                 header("Location: src/php/view/forminiciosesion.php?error=faltan_credenciales");
                 exit;
             }
+        }
+
+        public function irindice() {
+            $this->view = "indice";
         }
 
         public function irsesion() {

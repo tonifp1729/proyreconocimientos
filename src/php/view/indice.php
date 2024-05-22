@@ -1,6 +1,9 @@
 <?php
     //Inicia la sesión desde el modelo y se le da continuidad al comienzo de cada página de este modo.
-    session_start();
+    //Si no hay una sesión presente, la inicia.
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">

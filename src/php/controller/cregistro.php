@@ -1,18 +1,22 @@
 <?php
 
-    require_once '../model/nuevoreconocimiento.php';
+    require_once 'C:\xampp\htdocs\proyreconocimientos\src\php\model\nuevoalumno.php';
 
-    class ControladorRegistro {
-        private $conexion;
+    class Controladorcregistro {
+        public $view;
+        private $registrar;
 
-        public function __construct($conexion) {
-            $this->conexion = $conexion;
+        public function __construct() {
+            $this->registrar = new NuevoAlumno();
         }
 
-        public function registro($correo, $contrasena) {
+        public function registro() {
 
             //Verificamos que se hayan recibido las credenciales
-            if (!empty($correo) && !empty($contrasena)) {
+            if (!empty($_POST['correo']) && !empty($_POST['contrasena'])) {
+
+                $correo = $_POST['correo'];
+                $contrasena = $_POST['contrasena'];
 
                 //Comprueba que el correo introducido sea correcto (el de el alumnado de la fundacion)
                 if (strpos($correo, '@alumnado.fundacionloyola.net') === false) {
@@ -40,6 +44,10 @@
                 exit;
             }
         }
-    }
 
+            
+        public function irregistro() {
+            $this->view = "registro";
+        }
+    }
 ?>

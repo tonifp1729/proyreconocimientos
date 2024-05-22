@@ -1,12 +1,14 @@
 <?php
 
-    require_once '../../config/configdb.php';
+    require_once 'C:\xampp\htdocs\proyreconocimientos\src\php\model\db.php';
 
     class NuevoAlumno {
         private $conexion;
 
         public function __construct() {
-            $this->conexion = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            //Creamos un objeto e inicializamos la conexión a la base de datos
+            $db = new Conexiondb();
+            $this->conexion = $db->conexion;
         }
 
         public function insertarAlumno($nombre ,$correo, $contrasena, $web) {

@@ -7,7 +7,7 @@
     if(!isset($_GET["controlador"])) $_GET["controlador"] = constant("DEFAULT_CONTROLLER");
     if(!isset($_GET["action"])) $_GET["action"] = constant("DEFAULT_ACTION");
 
-    $rutaControlador = 'src/php/controlador/'.$_GET["controlador"].'.php';
+    $rutaControlador = 'src/php/controller/'.$_GET["controlador"].'.php';
 
     //Comprueba que exista un controlador
     if(!file_exists($rutaControlador)) $rutaControlador = 'src/php/controller/'.constant("DEFAULT_CONTROLLER").'.php';
