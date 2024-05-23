@@ -1,3 +1,6 @@
+<?php
+    var_dump($error);
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -21,11 +24,10 @@
             
             <?php
                 //Comprueba si se han recibido avisos de error y en caso afirmativo muestra el mensaje.
-                if(isset($_GET['error'])) {
-                    $error = $_GET['error'];
+                if(isset($error)) {
                     if($error == 'credenciales_invalidas') {
                         echo "<p class='error'>Las credenciales introducidas son inválidas.</p>";
-                    } elseif($error == 'faltan_credenciales') {
+                    } else if($error == 'faltan_credenciales') {
                         echo "<p class='error'>Faltan credenciales. Por favor, completa todos los campos.</p>";
                     }
                 }

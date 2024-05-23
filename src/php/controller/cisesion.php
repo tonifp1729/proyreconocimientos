@@ -12,6 +12,9 @@
         }
 
         public function identificacion() {
+            //Inicializamos la variable de error. Se devolverá en vallor nulo en caso de que no se produzca ningún fallo
+            $error = null;
+
             //Verificarmos que se han recibido las credenciales a través de POST
             if (!empty($_POST['correo']) && !empty($_POST['contrasena'])) {
                 $correo = $_POST['correo'];
@@ -27,15 +30,17 @@
                     $_SESSION['nombre'] = $alumno['nombre'];
                     $this->irindice(); //PASAMOS LA INFORMACION DE LA SIGUIENTE VISTA. Este es el modo de usar un método de la propia clase
                 } else {
-                    //Redirige al formulario de inicio de sesión con un mensaje de error si las credenciales son incorrectas
-                    header("Location: src/php/view/forminiciosesion.php?error=credenciales_invalidas");
-                    exit;
+                    //Asignamos el mensaje de error si las credenciales introducidas son incorrectas
+                    $this->irsesion();
+                    $error = 'credenciales_invalidas';
                 }
             } else {
-                // Redirigir al formulario de inicio de sesión con un mensaje de error si faltan credenciales
-                header("Location: src/php/view/forminiciosesion.php?error=faltan_credenciales");
-                exit;
+                //Asignamos el mensaje de error si faltan credenciales
+                $this->irsesion(); //Cargamos de nuevo la vista del formulario de inicio de sesión
+                $error = 'faltan_credenciales';
             }
+
+            return ['error' => $error];
         }
 
         public function irindice() {

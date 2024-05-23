@@ -17,9 +17,12 @@
     $controladorNombre = 'Controlador'.$_GET["controlador"];
     $controlador = new $controladorNombre();
 
-    //Comprobamos que se halla definido el método
+    //Comprobamos que se halla definido el método solicitado y lo llama
     $datosVista["data"] = array();
     if(method_exists($controlador,$_GET["action"])) $datosVista["data"] = $controlador->{$_GET["action"]}();
+
+    //Obtenemos el error que puede recibirse desde el controlador para utilizarlo en la vista de ser necesario
+    $error = isset($datosVista["data"]["error"]) ? $datosVista["data"]["error"] : null;
 
     //Cargamos las vistas
     require_once 'src/php/view/'.$controlador->view.'.php';
