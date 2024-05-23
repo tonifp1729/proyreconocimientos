@@ -1,6 +1,3 @@
-<?php
-    var_dump($error);
-?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
