@@ -2,7 +2,6 @@
 <?php
 
     require_once 'src/config/config.php';
-    require_once 'src/php/model/db.php';
 
     if(!isset($_GET["controlador"])) $_GET["controlador"] = constant("DEFAULT_CONTROLLER");
     if(!isset($_GET["action"])) $_GET["action"] = constant("DEFAULT_ACTION");
