@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'C:\xampp\htdocs\proyreconocimientos\src\config\config.php';
+require_once 'src\config\config.php';
 
     class Conexiondb {
         private $host;

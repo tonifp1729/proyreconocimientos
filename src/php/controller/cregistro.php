@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'C:\xampp\htdocs\proyreconocimientos\src\php\model\nuevoalumno.php';
+    require_once 'src\php\model\nuevoalumno.php';
 
     class Controladorcregistro {
         public $view;
@@ -11,43 +11,50 @@
         }
 
         public function registro() {
+            $error = null;
 
-            //Verificamos que se hayan recibido las credenciales
-            if (!empty($_POST['correo']) && !empty($_POST['contrasena'])) {
-
+            if (!empty($_POST['correo']) && !empty($_POST['contrasena']) && !empty($_POST['confirmarContrasena']) && !empty($_POST['nombre'])) {
                 $correo = $_POST['correo'];
                 $contrasena = $_POST['contrasena'];
-
-                //Comprueba que el correo introducido sea correcto (el de el alumnado de la fundacion)
-                if (strpos($correo, '@alumnado.fundacionloyola.net') === false) {
-                    // Redirigir al formulario de registro con un mensaje de error si el correo no tiene el dominio correcto
-                    header("Location: ../view/registro.php?error=dominio_invalido");
-                    exit;
+                $confirmacion = $_POST['confirmarContrasena'];
+                $nombre = $_POST['nombre'];
+                
+                if (!empty($_POST['web'])) {
+                    $web = $_POST['web'];
+                } else {
+                    $web = null;
                 }
-
-                //Comprueba que el '@' aparezca solo una vez en el correo
-                if (substr_count($correo, '@') !== 1) {
-                    // Redirigir al formulario de registro con un mensaje de error si el correo tiene más de un '@'
-                    header("Location: ../view/registro.php?error=correo_invalido");
-                    exit;
+                
+                
+                if ($contrasena != $confirmacion) {
+                    $this->irregistro();
+                    $error = 'contrasena_incorrecta';
+                } else if (!$this->validarCorreo($correo)) {
+                    $this->irregistro();
+                    $error = 'correo_invalido';
+                } else {
+                    $this->registrar->insertarAlumno($nombre,$correo, $contrasena,$web);
+                    $this->view = "forminiciosesion";
                 }
-
-                //Crea una instancia del modelo de registro de usuario
-                $registro = new NuevoAlumno($this->conexion);
-
-                //Verificar las credenciales utilizando el método del modelo
-                $nAlumno = $registro->buscarAlumno($correo, $contrasena);
-
             } else {
-                //Redirigir al formulario de registro con un mensaje de error si faltan credenciales
-                header("Location: ../view/registro.php?error=faltan_credenciales");
-                exit;
+                $this->irregistro();
+                $error = 'faltan_credenciales';
             }
+
+            return ['error' => $error];
         }
 
-            
+        private function validarCorreo($correo) {
+            //Expresión regular para asegurar que el correo recibido pertenece a este dominio: "@alumnado.fundacionloyola.net"
+            $regex = '/^[a-zA-Z0-9._%+-]+@alumnado\.fundacionloyola\.net$/';
+    
+            //Comprueba que el correo cumpla con lo establecido en $regex
+            return preg_match($regex, $correo) === 1;
+        }
+
         public function irregistro() {
             $this->view = "registro";
         }
+
     }
 ?>

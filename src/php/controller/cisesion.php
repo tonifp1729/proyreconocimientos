@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'C:\xampp\htdocs\proyreconocimientos\src\php\model\isesion.php';
+    require_once 'src\php\model\isesion.php';
 
     class Controladorcisesion {
 

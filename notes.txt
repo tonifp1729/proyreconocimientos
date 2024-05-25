@@ -6,4 +6,12 @@ ___________________________________
 	- Proceso: Hacer reconocimiento a un compañero.
 ___________________________________
 
-	--> Pendiente de modificacion del configdb y el index.
+	-He comenzado con el registro de usuario. Hay que hacer cambios al formulario y añadir las validaciones del formulario al 
+	 controlador. 
+
+	 Cuando acabe con el proceso de registro comienzo con los de reconocimientos (hacer y ver el listado de reconocimientos).
+
+
+	¡¡IMPORTANTE!!
+	 Los elementos con los que vamos a trabajar ahora son: El controlador de registro, el formulario de registro de usuario y el 
+	 modelo de registro.
