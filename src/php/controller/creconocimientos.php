@@ -29,6 +29,16 @@
         }
 
         public function mostrarReconocimiento() {
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+        
+            $idReconocimiento = $_GET['idReconocimiento'];
+            $reconocimiento = $this->reconocimientos->mostrarReconocimiento($idReconocimiento);
+            
+            //Pasamos los datos a la vista
+            $this->irver();
+            return ['reconocimiento' => $reconocimiento, 'num' => $_GET['num']];
             
         }
 

@@ -28,7 +28,19 @@
         }
 
         public function mostrarReconocimiento($idReconocimiento) {
-
+            $SQL = "SELECT momento, descripcion FROM reconocimiento WHERE idReconocimiento = ?";
+            $consulta = $this->conexion->prepare($SQL);
+            $consulta->bind_param("i", $idReconocimiento);
+            $consulta->execute();
+            $resultado = $consulta->get_result();
+            
+            $reconocimiento = null;
+            if ($resultado->num_rows > 0) {
+                $reconocimiento = $resultado->fetch_assoc();
+            }
+        
+            $consulta->close();
+            return $reconocimiento;
         }
 
         public function hacerReconocimiento($id, $idAlumnoRecibe) {

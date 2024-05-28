@@ -12,7 +12,7 @@
                     if(isset($datosVista['data']['reconocimientos']) && !empty($datosVista['data']['reconocimientos'])) {
                         $contador=1;
                         foreach($datosVista['data']['reconocimientos'] as $reconocimiento) {
-                            echo '<a href="index.php?controlador=creconocimiento&action=mostrarReconocimiento&idReconocimiento=' . $reconocimiento . '">Reconocimiento #' . $contador++ . '</a><br>';
+                            echo '<a href="index.php?controlador=creconocimientos&action=mostrarReconocimiento&idReconocimiento=' . $reconocimiento . '&num="'. $contador .'>Reconocimiento #' . $contador++ . '</a><br>';
                         }
                     } else {
                         echo '<p>No tienes reconocimientos.</p>';
