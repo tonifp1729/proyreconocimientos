@@ -71,6 +71,39 @@ input[type="submit"]:hover {
     background-color: #386f91;
 }
 
+#recs {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#recs a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#recs a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#recs p {
+    color: #666;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+
 .error {
     color: #ff0000;
     font-size: 14px;

@@ -1,17 +1,14 @@
 TRABAJO ACTUAL: PRIORIDAD ABSOLUTA
 ___________________________________
 
-	- Regitro de nuevo usuario.
-	- Proceso: Ver los reconocimientos que ha recibido un alumno.
+	- Proceso: Ver los reconocimientos que ha recibido un alumno. (Listado)
 	- Proceso: Hacer reconocimiento a un compañero.
 ___________________________________
 
-	-He comenzado con el registro de usuario. Hay que hacer cambios al formulario y añadir las validaciones del formulario al 
-	 controlador. 
+	- Hay que usar una cookie para guardar el ultimo compañero al que se le ha hecho un reconocimiento y mostrarlo
+	  por medio de un mensaje en la vista de reconocimientos.
 
-	 Cuando acabe con el proceso de registro comienzo con los de reconocimientos (hacer y ver el listado de reconocimientos).
+	- El alumno solo ve los reconocimientos enumerados en su lista, no quién los ha hecho.
 
-
-	¡¡IMPORTANTE!!
-	 Los elementos con los que vamos a trabajar ahora son: El controlador de registro, el formulario de registro de usuario y el 
-	 modelo de registro.
+	IMPORTANTE:
+		-> Habría que poner un botón de cierre de sesión.

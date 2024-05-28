@@ -13,7 +13,7 @@
 
         public function insertarAlumno($nombre ,$correo, $contrasena, $web) {
             
-            //Consulta SQL para ine
+            //Consulta SQL para insertar al nuevo alumno en la bd
             $SQL = "INSERT INTO alumno (nombre, correo, contrasenia, webReconocimiento) VALUES (?, ?, ?, ?);";
             
             //Preparar la consulta
