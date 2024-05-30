@@ -19,7 +19,7 @@
             <p>Esta aplicación te permite dar y recibir feedback de tus compañeros de clase.</p>
             <p>Podrás ver los reconocimientos que has recibido y hacer reconocimientos a tus compañeros.</p>
             <p>¡Comienza ahora mismo!</p>
-            <a href="index.php?controlador=creconocimientos&action=listarReconocimientos">Ver reconocimientos</a> | <a href="index.php?controlador=&action=">Hacer reconocimientos</a>
+            <a href="index.php?controlador=creconocimientos&action=listarReconocimientos">Ver reconocimientos</a> | <a href="index.php?controlador=creconocimientos&action=irhacer">Hacer reconocimientos</a>
         </div>
     </body>
 </html>

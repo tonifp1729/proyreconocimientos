@@ -1,14 +1,6 @@
-TRABAJO ACTUAL: PRIORIDAD ABSOLUTA
-___________________________________
+MIRAR COMO RECOGEN LOS DATOS DE VISTA Y CONTROLADORES EN LOS PROYECTOS DE COMPAÑEROS
 
-	- Proceso: Ver los reconocimientos que ha recibido un alumno. (Listado)
-	- Proceso: Hacer reconocimiento a un compañero.
-___________________________________
+Correcciones pendientes:
 
-	- Hay que usar una cookie para guardar el ultimo compañero al que se le ha hecho un reconocimiento y mostrarlo
-	  por medio de un mensaje en la vista de reconocimientos.
-
-	- El alumno solo ve los reconocimientos enumerados en su lista, no quién los ha hecho.
-
-	IMPORTANTE:
-		-> Habría que poner un botón de cierre de sesión.
+    -Un alumno puede hacerse a sí mismo un reconocimiento. Éto ta' mal
+    -Hay que mostrar el número por el que se identifica el reconocimiento que ha sido habierto

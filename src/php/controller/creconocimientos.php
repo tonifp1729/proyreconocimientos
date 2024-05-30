@@ -43,7 +43,29 @@
         }
 
         public function hacerReconocimiento() {
-            
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+    
+            $error = null;
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $idAlumnoEnvia = $_SESSION['id'];
+                $momento = $_POST['momento'];
+                $descripcion = $_POST['descripcion'];
+                $idAlumnoRecibe = $_POST['alumnorecibe'];
+    
+                if (!empty($momento) && !empty($descripcion) && !empty($idAlumnoRecibe) && !empty($idAlumnoEnvia)) {
+                    $this->reconocimientos->hacerReconocimiento($momento, $descripcion, $idAlumnoRecibe, $idAlumnoEnvia);
+                    $this->irlista();
+                } else {
+                    $error = 'faltan_credenciales';
+                    $this->irhacer();
+                }
+            } else {
+                $this->irhacer();
+            }
+    
+            return ['error' => $error];
         }
 
         public function irindice() {
@@ -55,7 +77,11 @@
         }
 
         public function irhacer() {
+            //No solo se encarga del direccionamiento sino que carga el listado de alumnos al cargar la vista
+            $alumnos = $this->reconocimientos->listarAlumnos();
+            
             $this->view = "hacerreconocimiento";
+            return ['alumnos' => $alumnos];
         }
 
         public function irver() {

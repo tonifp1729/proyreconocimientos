@@ -42,11 +42,26 @@
             $consulta->close();
             return $reconocimiento;
         }
+    
+        public function hacerReconocimiento($momento, $descripcion, $idAlumnoRecibe, $idAlumnoEnvia) {
+            $SQL = "INSERT INTO reconocimiento (momento, descripcion, idAlumRecibe, idAlumEnvia) VALUES (?, ?, ?, ?)";
 
-        public function hacerReconocimiento($id, $idAlumnoRecibe) {
-
+            $consulta = $this->conexion->prepare($SQL);
+            $consulta->bind_param("ssii", $momento, $descripcion, $idAlumnoRecibe, $idAlumnoEnvia);
+            $consulta->execute();
+            $consulta->close();
         }
 
+        public function listarAlumnos() {
+            $SQL = "SELECT idAlumno, nombre FROM alumno";
+            $resultado = $this->conexion->query($SQL);
+
+            $alumnos = [];
+            while ($alumno = $resultado->fetch_assoc()) {
+                $alumnos[] = $alumno;
+            }
+            return $alumnos;
+        }
     }
 
 ?>
