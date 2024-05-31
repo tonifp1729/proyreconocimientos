@@ -9,6 +9,7 @@
 
         public function __construct() {
             $this->reconocimientos = new Reconocimientos();
+            $this->verificarSesion();
         }
 
         public function listarReconocimientos() {
@@ -93,6 +94,24 @@
         public function irver() {
             $this->view = "verreconocimiento";
         }
+
+        /*
+          * Este método se ejecuta en cuanto se utiliza este controlador para comprobar la existencia de la variable de sesión.
+          * Si la variable de sesión no existe te redirige a la vista de inicio de sesión.
+         **/
+        private function verificarSesion() {
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+
+            //Verificamos que el usuario está iniciado
+            if (!isset($_SESSION['id'])) {
+                //Redirigimos a la página de inicio de sesión en caso de que no exista la sesión
+                header('Location: index.php');
+                exit(); //Detenemos la ejecución para evitar posibles fallos.
+            }
+        }
+
     }
 
 ?>
