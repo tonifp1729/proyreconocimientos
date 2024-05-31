@@ -19,7 +19,7 @@
                     }
                 ?>
             </div>
-            <a href="index.php?controlador=cregistro&action=irhacer">Hacer reconocimientos</a>
+            <a href="index.php?controlador=cisesion&action=irindice">Volver</a>
         </div>
     </body>
 </html>

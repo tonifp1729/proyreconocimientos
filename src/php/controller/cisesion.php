@@ -43,6 +43,14 @@
             return ['error' => $error];
         }
 
+        public function cerrarSesion() {
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+            session_destroy();
+            $this->irsesion();
+        }
+
         public function irindice() {
             $this->view = "indice";
         }

@@ -56,7 +56,7 @@
     
                 if (!empty($momento) && !empty($descripcion) && !empty($idAlumnoRecibe) && !empty($idAlumnoEnvia)) {
                     $this->reconocimientos->hacerReconocimiento($momento, $descripcion, $idAlumnoRecibe, $idAlumnoEnvia);
-                    $this->irlista();
+                    $this->irhacer();
                 } else {
                     $error = 'faltan_credenciales';
                     $this->irhacer();

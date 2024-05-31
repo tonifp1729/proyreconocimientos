@@ -33,7 +33,7 @@
                 ?>
                 <input type="submit" value="Enviar reconocimiento">
             </form>
-            <a href="index.php?controlador=creconocimientos&action=listarReconocimientos">Ver reconocimientos</a>
+            <a href="index.php?controlador=cisesion&action=irindice">Volver</a>
         </div>
     </body>
 </html>

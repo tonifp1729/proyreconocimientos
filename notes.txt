@@ -1,6 +1,21 @@
+DEBERES:
+___________________
+
+    -> La cookie debe guardar la información de el último compañero al que se le han enviado.
+
+___________________
 MIRAR COMO RECOGEN LOS DATOS DE VISTA Y CONTROLADORES EN LOS PROYECTOS DE COMPAÑEROS
 
-Correcciones pendientes:
+Correcciones pendientes(OPCIONAL):
 
     -Un alumno puede hacerse a sí mismo un reconocimiento. Éto ta' mal
     -Hay que mostrar el número por el que se identifica el reconocimiento que ha sido habierto
+
+FALTA POR EVALUAR: OBLIGATORIO
+
+    - Gestión de perfiles.
+    - Cookies
+    - Encriptado de contraseñas.
+    -------------------------> Se hace HOY 
+
+    - Subir archivos (excel) ----> Nos lo explica Isa.
