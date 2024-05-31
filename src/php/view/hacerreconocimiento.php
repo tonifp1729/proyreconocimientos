@@ -30,6 +30,10 @@
                             echo "<p class='error'>Faltan credenciales. Por favor, completa todos los campos.</p>";
                         }
                     }
+                    
+                    if (isset($_COOKIE['compi'])) {
+                        echo '<p>El último compañero al que le has enviado un reconocimiento es '.$_COOKIE['compi'].'.</p>';
+                    }
                 ?>
                 <input type="submit" value="Enviar reconocimiento">
             </form>

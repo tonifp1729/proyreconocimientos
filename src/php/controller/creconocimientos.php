@@ -20,10 +20,10 @@
 
             $idAlumno = $_SESSION['id'];
             
-            // Obtener los reconocimientos del modelo
+            //Obtenemos los reconocimientos del modelo
             $reconocimientos = $this->reconocimientos->listarReconocimientos($idAlumno);
             
-            // Pasar los datos a la vista
+            //Pasamos los datos a la vista
             $this->irlista();
             return ['reconocimientos' => $reconocimientos];
         }
@@ -56,7 +56,8 @@
     
                 if (!empty($momento) && !empty($descripcion) && !empty($idAlumnoRecibe) && !empty($idAlumnoEnvia)) {
                     $this->reconocimientos->hacerReconocimiento($momento, $descripcion, $idAlumnoRecibe, $idAlumnoEnvia);
-                    $this->irhacer();
+                    $this->view = "recexitoso";
+                    $this->ultimoReconocimiento($idAlumnoRecibe);
                 } else {
                     $error = 'faltan_credenciales';
                     $this->irhacer();
@@ -66,6 +67,11 @@
             }
     
             return ['error' => $error];
+        }
+
+        public function ultimoReconocimiento($idAlumnoRecibe) {
+            $compi = $this->reconocimientos->nombreCompi($idAlumnoRecibe);
+            setcookie("compi", $compi,time() + 3600);
         }
 
         public function irindice() {
@@ -79,8 +85,8 @@
         public function irhacer() {
             //No solo se encarga del direccionamiento sino que carga el listado de alumnos al cargar la vista
             $alumnos = $this->reconocimientos->listarAlumnos();
-            
             $this->view = "hacerreconocimiento";
+
             return ['alumnos' => $alumnos];
         }
 
