@@ -1,5 +1,5 @@
-<!-- ESTE ES EL CONTROLADOR PRINCIPAL DE LA APLICACIÓN -->
 <?php
+    //ESTE ES EL CONTROLADOR PRINCIPAL DE LA APLICACIÓN
 
     require_once 'src/config/config.php';
 
@@ -13,6 +13,9 @@
 
     //Cargamos el controlador
     require_once $rutaControlador;
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
     $controladorNombre = 'Controlador'.$_GET["controlador"];
     $controlador = new $controladorNombre();
 
