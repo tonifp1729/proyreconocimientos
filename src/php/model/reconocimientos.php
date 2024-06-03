@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'src\php\model\db.php';
+    require_once 'db.php';
 
     class Reconocimientos {
         private $conexion;

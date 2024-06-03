@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'src\config\config.php';
+    require_once '/home/proyectosevg/public_html/2daw00/reconocimientos/src/config/config.php';
 
     class Conexiondb {
         private $host;
@@ -10,7 +10,7 @@ require_once 'src\config\config.php';
         public $conexion;
 
         public function __construct() {		
-
+            echo "ESTOY DENTRO DEL CONSTRUCTOR DE DB";
             $this->host = constant('DB_HOST');
             $this->user = constant('DB_USER');
             $this->pass = constant('DB_PASSWORD');
@@ -21,4 +21,6 @@ require_once 'src\config\config.php';
         }
     }
 
+
+    $obj = new Conexiondb();
 ?>

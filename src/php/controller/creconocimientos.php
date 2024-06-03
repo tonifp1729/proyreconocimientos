@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'src\php\model\reconocimientos.php';
+    require_once '/home/proyectosevg/public_html/2daw00/reconocimientos/src/php/model/reconocimientos.php';
 
     class Controladorcreconocimientos {
 
