@@ -7,17 +7,14 @@
     if(!isset($_GET["action"])) $_GET["action"] = constant("DEFAULT_ACTION");
 
     $rutaControlador = 'src/php/controller/'.$_GET["controlador"].'.php';
-    echo ' 1 - Ruta del controlador: ' . $rutaControlador;
 
     //Comprueba que exista un controlador
     if(!file_exists($rutaControlador)) $rutaControlador = 'src/php/controller/'.constant("DEFAULT_CONTROLLER").'.php';
-    echo '<br>2 - Ruta del controlador: ' . $rutaControlador;
 
     //Cargamos el controlador
     require_once $rutaControlador;
     $controladorNombre = 'Controlador'.$_GET["controlador"];
     $controlador = new $controladorNombre();
-    echo '<br>3 - Ruta del controlador: ' . $rutaControlador;
 
     //Comprobamos que se halla definido el método solicitado y lo llama
     $datosVista["data"] = array();
