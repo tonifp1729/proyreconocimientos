@@ -10,7 +10,7 @@
         public $conexion;
 
         public function __construct() {		
-            echo "ESTOY DENTRO DEL CONSTRUCTOR DE DB";
+
             $this->host = constant('DB_HOST');
             $this->user = constant('DB_USER');
             $this->pass = constant('DB_PASSWORD');
@@ -20,7 +20,5 @@
 
         }
     }
-
-
-    $obj = new Conexiondb();
+    
 ?>

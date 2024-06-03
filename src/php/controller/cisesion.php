@@ -7,7 +7,6 @@
         private $isesion;
 
         public function __construct() {
-            echo ' CONTROLADOR CARGADOOOO';
             $this->isesion = new InicioSesion();
         }
 

@@ -25,6 +25,5 @@
 
     //Cargamos las vistas
     require_once 'src/php/view/'.$controlador->view.'.php';
-    echo 'src/php/view/'.$controlador->view.'.php';
 
 ?>
