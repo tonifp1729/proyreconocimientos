@@ -43,6 +43,10 @@
             
         }
 
+        /*
+          * El método del controlador que se ejecuta cuando enviamos los datos del formulario de reconocimiento.
+          * Comprueba que se haya recibido el POST, introduce la información en variables para su manejo y realiza las validaciones necesarias para tratar los reconocimientos.
+         **/
         public function hacerReconocimiento() {
             if (session_status() == PHP_SESSION_NONE) {
                 session_start();
@@ -70,6 +74,10 @@
             return ['error' => $error];
         }
 
+        /*
+          * Este método se ejecuta en cuanto se ha validado un reconocimiento.
+          * Crea o modifica la cookie en la que guardamos el nombre del último compañero sobre el que se ha realizado un reconocimiento.
+         **/
         public function ultimoReconocimiento($idAlumnoRecibe) {
             $compi = $this->reconocimientos->nombreCompi($idAlumnoRecibe);
             setcookie("compi", $compi,time() + 3600);

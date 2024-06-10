@@ -10,6 +10,10 @@
             $this->registrar = new NuevoAlumno();
         }
 
+        /*
+          * Este método se ejecuta en cuanto se ha pulsado el botón de envío desde el formulario de registro de alumno.
+          * Hace el registro de un nuevo alumno a la aplicación.
+         **/
         public function registro() {
             $error = null;
 
@@ -44,6 +48,10 @@
             return ['error' => $error];
         }
 
+        /*
+          * Este método se ejecuta durante las validaciones del método de registro.
+          * Comprueba que el dominio del correo electrónico pertenezca a la fundación loyola y al alumnado.
+         **/
         private function validarCorreo($correo) {
             //Expresión regular para asegurar que el correo recibido pertenece a este dominio: "@alumnado.fundacionloyola.net"
             $regex = '/^[a-zA-Z0-9._%+-]+@alumnado\.fundacionloyola\.net$/';

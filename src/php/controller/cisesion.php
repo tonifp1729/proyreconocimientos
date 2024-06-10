@@ -10,6 +10,10 @@
             $this->isesion = new InicioSesion();
         }
 
+        /*
+          * Este método se ejecuta en cuanto se ha pulsado el botón de envío desde el formulario de inicio de sesión.
+          * Se encarga del inicio de sesión en la aplicación.
+         **/
         public function identificacion() {
             //Inicializamos la variable de error. Se devolverá en vallor nulo en caso de que no se produzca ningún fallo
             $error = null;
@@ -42,6 +46,10 @@
             return ['error' => $error];
         }
 
+        /*
+          * Este método se ejecuta en cuanto se pulsa el cierre de sesión.
+          * Se encarga de destruir la sesión existente y manda al usuario a la ventana de inicio.
+         **/
         public function cerrarSesion() {
             if (session_status() == PHP_SESSION_NONE) {
                 session_start();

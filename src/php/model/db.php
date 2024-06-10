@@ -8,7 +8,10 @@
         private $pass;
         private $db;
         public $conexion;
-
+        
+        /*
+          * Damos valor a las variables con las constantes guardadas en configuración y con estas se realiza la conexión.
+         **/
         public function __construct() {		
 
             $this->host = constant('DB_HOST');
